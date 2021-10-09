@@ -1,0 +1,158 @@
+<!DOCTYPE html><html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><link rel="stylesheet" type="text/css" href="/css/normalize.css"><link rel="stylesheet" type="text/css" href="/css/highlight.css"><link rel="stylesheet" type="text/css" href="/css/noise.css"><title>linkpwd| | linkpwd's blog 自留地</title><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><meta name="generator" content="Hexo 5.4.0"></head><body><header class="wrapper header"><div class="container blog-title"><a class="title" id="logo" href="/.">linkpwd|</a><span class="subtitle">linkpwd's blog 自留地</span><label id="toggle-menu" for="menu" onclick><i class="fa fa-bars"></i></label></div><input id="menu" type="checkbox"><div class="container nav-items"><a class="sidebar-nav-item active" href="/">主页</a><a class="sidebar-nav-item" href="/archives">归档</a></div></header><article class="wrapper"><div class="container entries" id="index-main"><div class="post-entry"><div class="post-desc"><div class="post-title"><a href="/2021/09/29/kibana-monitoring-deny/">kibana Stack Monitoring deny</a></div><div class="post-content"><p>今天点击Stack Monitoring查看ES集群日志性能的时候，发现出错了，于是有此文</p></div><div class="post-meta"><div class="post-time">2021-09-29</div></div></div></div><div class="post-entry"><div class="post-desc"><div class="post-title"><a href="/2021/09/26/docker-summary/">docker的一些总结</a></div><div class="post-content"><h3 id="操作系统基础镜像"><a href="#操作系统基础镜像" class="headerlink" title="操作系统基础镜像"></a>操作系统基础镜像</h3><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>大小</th>
+<th>包管理</th>
+<th>场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>busybox</td>
+<td>1.xMB</td>
+<td>apk, lbu</td>
+<td>超级简化版嵌入式</td>
+</tr>
+<tr>
+<td>alpine</td>
+<td>5.x MB</td>
+<td>apk, lbu</td>
+<td>Alpine是一个面向安全的、轻量级的Linux系统，基于musl libc和busybox</td>
+</tr>
+<tr>
+<td>ubuntu</td>
+<td>70~80 MB</td>
+<td>apt-get, dpkg</td>
+<td>非常出色的Linux发行版</td>
+</tr>
+<tr>
+<td>debian</td>
+<td>120~+/- MB</td>
+<td>apt-get, dpkg</td>
+<td>非常出色的Linux发行版,很多基于它的发行版</td>
+</tr>
+<tr>
+<td>centos</td>
+<td>200+ MB</td>
+<td>yum, rpm</td>
+<td>CentOS是RedHat的社区版</td>
+</tr>
+</tbody></table>
+<br/>
+
+<h3 id="编程语言基础镜像"><a href="#编程语言基础镜像" class="headerlink" title="编程语言基础镜像"></a>编程语言基础镜像</h3><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>tag</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>java</td>
+<td>openjdk:11</td>
+<td>由于oracle jdk版本，不提供docker官方,可手动下载打docker镜像</td>
+</tr>
+<tr>
+<td>python</td>
+<td>3.9.7-alpine3.14</td>
+<td>略</td>
+</tr>
+<tr>
+<td>go</td>
+<td>1.16.8-alpine3.14</td>
+<td>略</td>
+</tr>
+<tr>
+<td>nodejs</td>
+<td>14-alpine3.12/16-alpine3.12</td>
+<td>略</td>
+</tr>
+</tbody></table>
+<br/>
+
+<h3 id="个人常用工具及应用"><a href="#个人常用工具及应用" class="headerlink" title="个人常用工具及应用"></a>个人常用工具及应用</h3><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>tag</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>maven</td>
+<td>3.8.2-jdk-8-slim/3.8.2-openjdk-17</td>
+<td>略</td>
+</tr>
+<tr>
+<td>jenkins</td>
+<td>2.60.3</td>
+<td>略</td>
+</tr>
+<tr>
+<td>GitLab</td>
+<td>gitlab/gitlab-ce</td>
+<td>略</td>
+</tr>
+<tr>
+<td>yearning</td>
+<td>2.3.5</td>
+<td>略</td>
+</tr>
+<tr>
+<td>mysql</td>
+<td>8.0.26</td>
+<td>略</td>
+</tr>
+<tr>
+<td>nginx</td>
+<td>stable-alpine, 1.20-alpine</td>
+<td>略</td>
+</tr>
+</tbody></table>
+<h3 id="alpine的工小具"><a href="#alpine的工小具" class="headerlink" title="alpine的工小具"></a><a target="_blank" rel="noopener" href="https://hub.docker.com/search?q=alpine&type=image">alpine的工小具</a></h3><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>用途</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>alpine/k8s</td>
+<td>CI/CD相关的时候</td>
+<td>Kubernetes toolbox for EKS (kubectl, helm, iam-authenticator, eksctl, etc)</td>
+</tr>
+<tr>
+<td>alpine/git</td>
+<td>临时的git command</td>
+<td>A simple git container running in alpine linux, especially for tiny linux distro.</td>
+</tr>
+<tr>
+<td>alpine/helm</td>
+<td>heam相关</td>
+<td>Auto-trigger docker build for kubernetes helm when new release is announced</td>
+</tr>
+<tr>
+<td>alpine/jmeter</td>
+<td>压测</td>
+<td>略</td>
+</tr>
+<tr>
+<td>alpine/dfimage</td>
+<td>解析镜像中的内容，便于重新反写Dockerfile文件</td>
+<td>reverse Docker images into Dockerfiles</td>
+</tr>
+<tr>
+<td>alpine/ansible</td>
+<td>运维管理工作</td>
+<td>略</td>
+</tr>
+</tbody></table>
+<br/>
+
+<h3 id="运行一些常用docker的命令"><a href="#运行一些常用docker的命令" class="headerlink" title="运行一些常用docker的命令"></a>运行一些常用docker的命令</h3><p>mysql server : </p></div><div class="post-meta"><div class="post-time">2021-09-26</div></div></div></div><div class="post-entry"><div class="post-desc"><div class="post-title"><a href="/2021/09/14/gitlab-cicd/">gitlab通过pipeline实现ci/cd</a></div><div class="post-content"><h3 id="运行环境-gitlab-gitlab-runner运行环境"><a href="#运行环境-gitlab-gitlab-runner运行环境" class="headerlink" title="运行环境 gitlab + gitlab runner运行环境"></a>运行环境 gitlab + gitlab runner运行环境</h3><blockquote>
+<p>gitlab分gitlab/gitlab-ce, gitlab/gitlab-ee， 社区版本和企业版本<br>系统: CentOS7.9<br>docker: 20.10.8<br>gitlab版本： GitLab Community Edition 14.1.2</p></div><div class="post-meta"><div class="post-time">2021-09-14</div></div></div></div><div class="post-entry"><div class="post-desc"><div class="post-title"><a href="/2021/09/11/slb-nat-eip/">slb与nat及eip的相关联</a></div><div class="post-content"><h3 id="几个概念"><a href="#几个概念" class="headerlink" title="几个概念"></a>几个概念</h3><p>NAT: 网络地址转换，一般在路由器或者是网络的入口处对地址进行映射，缓解ip地址缺的问题<br>SLB: 负载均衡<br>EIP: 浮动的ip，可随时绑定解绑</p></div><div class="post-meta"><div class="post-time">2021-09-11</div></div></div></div><div class="post-entry"><div class="post-desc"><div class="post-title"><a href="/2021/09/06/winpe-wepe/">winpe工具WEPE微PE工具箱</a></div><div class="post-content"><p>之前用什么大白菜、老毛桃等等各种工具，方便倒是也方便，只是安装完后估计得有些什么乱七八糟的东西了，终于找到了个<a target="_blank" rel="noopener" href="http://www.wepe.com.cn/">WEPE</a>，目前发现还是很好使的。</p></div><div class="post-meta"><div class="post-tags"><a class="post-tag-none-link" href="/tags/wepe/" rel="tag">wepe</a><a class="post-tag-none-link" href="/tags/winpe/" rel="tag">winpe</a></div><div class="post-time">2021-09-06</div></div></div></div><div class="post-entry"><div class="post-desc"><div class="post-title"><a href="/2021/09/06/hexo-blog/">hexo搭建blog打包发布</a></div><div class="post-content"><p>又开始搞blog，真是闲得，那么多地方可以记录，可是偏偏不满意，有什么办法呢。这次使用Markdown记录下来，然后同步到各平台吧。</p></div><div class="post-meta"><div class="post-tags"><a class="post-tag-none-link" href="/tags/blog/" rel="tag">blog</a><a class="post-tag-none-link" href="/tags/hexo/" rel="tag">hexo</a><a class="post-tag-none-link" href="/tags/node/" rel="tag">node</a></div><div class="post-time">2021-09-06</div></div></div></div><div class="post-entry"><div class="post-desc"><div class="post-title"><a href="/2021/09/03/hello-world/">Hello World</a></div><div class="post-content"><p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p></div><div class="post-meta"><div class="post-time">2021-09-03</div></div></div></div></div></article><div class="wrapper page-navigator-wrapper"></div><footer class="footer wrapper"><div class="social"></div><div class="footer-content">© 2021 <a href="/" rel="nofollow">linkpwd|</a>. Powered by <a rel="nofollow" target="_blank" href="https://hexo.io">Hexo</a>. Theme <a target="_blank" href="https://github.com/lotabout/hexo-theme-noise">noise</a>.</div></footer><link rel="stylesheet" type="text/css" href="/css/font.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.css"><script src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script><script src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js"></script><script>$(document).ready(function() {
+  $(".fancybox").fancybox();
+});
+</script></body></html>

@@ -1,0 +1,355 @@
+<!DOCTYPE html><html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content=" id=&quot;操作系统基础镜像&quot;&gt;&lt;a href=&quot;#操作系统基础镜像&quot; class=&quot;headerlink&quot; title=&quot;操作系统基础镜像&quot;&gt;&lt;/a&gt;操作系统基础镜像&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;大小&lt;/th&gt;
+&lt;th&gt;包管理&lt;/th&gt;
+&lt;th&gt;场景&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;busybox&lt;/td&gt;
+&lt;td&gt;1.xMB&lt;/td&gt;
+&lt;td&gt;apk, lbu&lt;/td&gt;
+&lt;td&gt;超级简化版嵌入式&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;alpine&lt;/td&gt;
+&lt;td&gt;5.x MB&lt;/td&gt;
+&lt;td&gt;apk, lbu&lt;/td&gt;
+&lt;td&gt;Alpine是一个面向安全的、轻量级的Linux系统，基于musl libc和busybox&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ubuntu&lt;/td&gt;
+&lt;td&gt;70~80 MB&lt;/td&gt;
+&lt;td&gt;apt-get, dpkg&lt;/td&gt;
+&lt;td&gt;非常出色的Linux发行版&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;debian&lt;/td&gt;
+&lt;td&gt;120~+/- MB&lt;/td&gt;
+&lt;td&gt;apt-get, dpkg&lt;/td&gt;
+&lt;td&gt;非常出色的Linux发行版,很多基于它的发行版&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;centos&lt;/td&gt;
+&lt;td&gt;200+ MB&lt;/td&gt;
+&lt;td&gt;yum, rpm&lt;/td&gt;
+&lt;td&gt;CentOS是RedHat的社区版&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;br/&gt;
+
+&lt;h3 id=&quot;编程语言基础镜像&quot;&gt;&lt;a href=&quot;#编程语言基础镜像&quot; class=&quot;headerlink&quot; title=&quot;编程语言基础镜像&quot;&gt;&lt;/a&gt;编程语言基础镜像&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;tag&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;java&lt;/td&gt;
+&lt;td&gt;openjdk:11&lt;/td&gt;
+&lt;td&gt;由于oracle jdk版本，不提供docker官方,可手动下载打docker镜像&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;python&lt;/td&gt;
+&lt;td&gt;3.9.7-alpine3.14&lt;/td&gt;
+&lt;td&gt;略&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;go&lt;/td&gt;
+&lt;td&gt;1.16.8-alpine3.14&lt;/td&gt;
+&lt;td&gt;略&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;nodejs&lt;/td&gt;
+&lt;td&gt;14-alpine3.12/16-alpine3.12&lt;/td&gt;
+&lt;td&gt;略&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;br/&gt;
+
+&lt;h3 id=&quot;个人常用工具及应用&quot;&gt;&lt;a href=&quot;#个人常用工具及应用&quot; class=&quot;headerlink&quot; title=&quot;个人常用工具及应用&quot;&gt;&lt;/a&gt;个人常用工具及应用&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;tag&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;maven&lt;/td&gt;
+&lt;td&gt;3.8.2-jdk-8-slim/3.8.2-openjdk-17&lt;/td&gt;
+&lt;td&gt;略&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;jenkins&lt;/td&gt;
+&lt;td&gt;2.60.3&lt;/td&gt;
+&lt;td&gt;略&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;GitLab&lt;/td&gt;
+&lt;td&gt;gitlab/gitlab-ce&lt;/td&gt;
+&lt;td&gt;略&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;yearning&lt;/td&gt;
+&lt;td&gt;2.3.5&lt;/td&gt;
+&lt;td&gt;略&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;mysql&lt;/td&gt;
+&lt;td&gt;8.0.26&lt;/td&gt;
+&lt;td&gt;略&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;nginx&lt;/td&gt;
+&lt;td&gt;stable-alpine, 1.20-alpine&lt;/td&gt;
+&lt;td&gt;略&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;h3 id=&quot;alpine的工小具&quot;&gt;&lt;a href=&quot;#alpine的工小具&quot; class=&quot;headerlink&quot; title=&quot;alpine的工小具&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://hub.docker.com/search?q=alpine&amp;type=image&quot;&gt;alpine的工小具&lt;/a&gt;&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;用途&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;alpine/k8s&lt;/td&gt;
+&lt;td&gt;CI/CD相关的时候&lt;/td&gt;
+&lt;td&gt;Kubernetes toolbox for EKS (kubectl, helm, iam-authenticator, eksctl, etc)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;alpine/git&lt;/td&gt;
+&lt;td&gt;临时的git command&lt;/td&gt;
+&lt;td&gt;A simple git container running in alpine linux, especially for tiny linux distro.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;alpine/helm&lt;/td&gt;
+&lt;td&gt;heam相关&lt;/td&gt;
+&lt;td&gt;Auto-trigger docker build for kubernetes helm when new release is announced&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;alpine/jmeter&lt;/td&gt;
+&lt;td&gt;压测&lt;/td&gt;
+&lt;td&gt;略&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;alpine/dfimage&lt;/td&gt;
+&lt;td&gt;解析镜像中的内容，便于重新反写Dockerfile文件&lt;/td&gt;
+&lt;td&gt;reverse Docker images into Dockerfiles&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;alpine/ansible&lt;/td&gt;
+&lt;td&gt;运维管理工作&lt;/td&gt;
+&lt;td&gt;略&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;br/&gt;
+
+&lt;h3 id=&quot;运行一些常用docker的命令&quot;&gt;&lt;a href=&quot;#运行一些常用docker的命令&quot; class=&quot;headerlink&quot; title=&quot;运行一些常用docker的命令&quot;&gt;&lt;/a&gt;运行一些常用docker的命令&lt;/h3&gt;&lt;p&gt;mysql server : "><link rel="stylesheet" type="text/css" href="/css/normalize.css"><link rel="stylesheet" type="text/css" href="/css/highlight.css"><link rel="stylesheet" type="text/css" href="/css/noise.css"><title>docker的一些总结 | linkpwd|</title><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><meta name="generator" content="Hexo 5.4.0"></head><body><article class="wrapper"><div class="post-main"><div class="nav"><nav class="container"><a class="sidebar-nav-item active" href="/">主页</a><a class="sidebar-nav-item" href="/archives">归档</a></nav><div class="container post-meta"><div class="post-time">2021-09-26</div></div></div><div class="container post-header"><h1>docker的一些总结</h1></div><div class="container post-toc"><details class="toc"><summary class="toc-accordion">目录</summary><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E9%95%9C%E5%83%8F"><span class="toc-number">1.</span> <span class="toc-text">操作系统基础镜像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E9%95%9C%E5%83%8F"><span class="toc-number">2.</span> <span class="toc-text">编程语言基础镜像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%AA%E4%BA%BA%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E5%8F%8A%E5%BA%94%E7%94%A8"><span class="toc-number">3.</span> <span class="toc-text">个人常用工具及应用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#alpine%E7%9A%84%E5%B7%A5%E5%B0%8F%E5%85%B7"><span class="toc-number">4.</span> <span class="toc-text">alpine的工小具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8docker%E7%9A%84%E5%91%BD%E4%BB%A4"><span class="toc-number">5.</span> <span class="toc-text">运行一些常用docker的命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%A0%E4%B8%AADockerfile"><span class="toc-number">6.</span> <span class="toc-text">几个Dockerfile</span></a></li></ol></details></div><div class="container post-content"><h3 id="操作系统基础镜像"><a href="#操作系统基础镜像" class="headerlink" title="操作系统基础镜像"></a>操作系统基础镜像</h3><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>大小</th>
+<th>包管理</th>
+<th>场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>busybox</td>
+<td>1.xMB</td>
+<td>apk, lbu</td>
+<td>超级简化版嵌入式</td>
+</tr>
+<tr>
+<td>alpine</td>
+<td>5.x MB</td>
+<td>apk, lbu</td>
+<td>Alpine是一个面向安全的、轻量级的Linux系统，基于musl libc和busybox</td>
+</tr>
+<tr>
+<td>ubuntu</td>
+<td>70~80 MB</td>
+<td>apt-get, dpkg</td>
+<td>非常出色的Linux发行版</td>
+</tr>
+<tr>
+<td>debian</td>
+<td>120~+/- MB</td>
+<td>apt-get, dpkg</td>
+<td>非常出色的Linux发行版,很多基于它的发行版</td>
+</tr>
+<tr>
+<td>centos</td>
+<td>200+ MB</td>
+<td>yum, rpm</td>
+<td>CentOS是RedHat的社区版</td>
+</tr>
+</tbody></table>
+<br/>
+
+<h3 id="编程语言基础镜像"><a href="#编程语言基础镜像" class="headerlink" title="编程语言基础镜像"></a>编程语言基础镜像</h3><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>tag</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>java</td>
+<td>openjdk:11</td>
+<td>由于oracle jdk版本，不提供docker官方,可手动下载打docker镜像</td>
+</tr>
+<tr>
+<td>python</td>
+<td>3.9.7-alpine3.14</td>
+<td>略</td>
+</tr>
+<tr>
+<td>go</td>
+<td>1.16.8-alpine3.14</td>
+<td>略</td>
+</tr>
+<tr>
+<td>nodejs</td>
+<td>14-alpine3.12/16-alpine3.12</td>
+<td>略</td>
+</tr>
+</tbody></table>
+<br/>
+
+<h3 id="个人常用工具及应用"><a href="#个人常用工具及应用" class="headerlink" title="个人常用工具及应用"></a>个人常用工具及应用</h3><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>tag</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>maven</td>
+<td>3.8.2-jdk-8-slim/3.8.2-openjdk-17</td>
+<td>略</td>
+</tr>
+<tr>
+<td>jenkins</td>
+<td>2.60.3</td>
+<td>略</td>
+</tr>
+<tr>
+<td>GitLab</td>
+<td>gitlab/gitlab-ce</td>
+<td>略</td>
+</tr>
+<tr>
+<td>yearning</td>
+<td>2.3.5</td>
+<td>略</td>
+</tr>
+<tr>
+<td>mysql</td>
+<td>8.0.26</td>
+<td>略</td>
+</tr>
+<tr>
+<td>nginx</td>
+<td>stable-alpine, 1.20-alpine</td>
+<td>略</td>
+</tr>
+</tbody></table>
+<h3 id="alpine的工小具"><a href="#alpine的工小具" class="headerlink" title="alpine的工小具"></a><a target="_blank" rel="noopener" href="https://hub.docker.com/search?q=alpine&type=image">alpine的工小具</a></h3><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>用途</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>alpine/k8s</td>
+<td>CI/CD相关的时候</td>
+<td>Kubernetes toolbox for EKS (kubectl, helm, iam-authenticator, eksctl, etc)</td>
+</tr>
+<tr>
+<td>alpine/git</td>
+<td>临时的git command</td>
+<td>A simple git container running in alpine linux, especially for tiny linux distro.</td>
+</tr>
+<tr>
+<td>alpine/helm</td>
+<td>heam相关</td>
+<td>Auto-trigger docker build for kubernetes helm when new release is announced</td>
+</tr>
+<tr>
+<td>alpine/jmeter</td>
+<td>压测</td>
+<td>略</td>
+</tr>
+<tr>
+<td>alpine/dfimage</td>
+<td>解析镜像中的内容，便于重新反写Dockerfile文件</td>
+<td>reverse Docker images into Dockerfiles</td>
+</tr>
+<tr>
+<td>alpine/ansible</td>
+<td>运维管理工作</td>
+<td>略</td>
+</tr>
+</tbody></table>
+<br/>
+
+<h3 id="运行一些常用docker的命令"><a href="#运行一些常用docker的命令" class="headerlink" title="运行一些常用docker的命令"></a>运行一些常用docker的命令</h3><p>mysql server : </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --name mysql8 -v /data/mysql8/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:8.0.26 --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci</span><br></pre></td></tr></table></figure>
+
+<p>redis:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">run -d --name redis -p 6379:6379 -v /mnt/redis/data:/data -v /mnt/redis/conf/redis.conf:/etc/redis/redis.conf redis:4 --requirepass <span class="string">&quot;redispass&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>portainer: </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer</span><br></pre></td></tr></table></figure>
+
+<p>elasticsearch:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --name elasticsearch -p 9200:9200 -p 9300:9300 -e <span class="string">&quot;discovery.type=single-node&quot;</span> -e ES_JAVA_OPTS=<span class="string">&quot;-Xms512m -Xmx768m&quot;</span> -d elasticsearch:7.12.0</span><br></pre></td></tr></table></figure>
+
+<p>运行一个操作系统或某种环境，在后台：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d centos /bin/bash -c <span class="string">&quot;while true;do echo hello ;sleep 3;done&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>jenkins:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker run --name myjenkins -p 8080:8080 -p 50000:50000 -v /var/jenkins_home jenkins</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<p>git:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -ti --rm -v <span class="variable">$&#123;HOME&#125;</span>:/root -v $(<span class="built_in">pwd</span>):/git alpine/git <span class="built_in">clone</span> https://github.com/alpine-docker/git.git</span><br></pre></td></tr></table></figure>
+
+<p>dfimage:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span> dfimage=<span class="string">&quot;docker run -v /var/run/docker.sock:/var/run/docker.sock --rm alpine/dfimage&quot;</span></span><br><span class="line">dfimage -sV=1.36 nginx:latest <span class="comment"># (It will pull the target docker image automaticlaly. Parameter -sV=1.36 is not always required.)</span></span><br></pre></td></tr></table></figure>
+
+<p>ansible:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span> ansible=<span class="string">&quot;docker run -ti --rm -v ~/.ssh:/root/.ssh -v ~/.aws:/root/.aws -v <span class="subst">$(pwd)</span>:/apps -w /apps alpine/ansible ansible&quot;</span></span><br><span class="line">ansible &lt;follow <span class="built_in">command</span>&gt;</span><br><span class="line">或</span><br><span class="line"><span class="built_in">alias</span> ansible-playbook=<span class="string">&quot; docker run -ti --rm -v ~/.ssh:/root/.ssh -v ~/.aws:/root/.aws -v <span class="subst">$(pwd)</span>:/apps -w /apps alpine/ansible ansible-playbook&quot;</span></span><br><span class="line">ansible-playbook -i inventory &lt; follow <span class="built_in">command</span>&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+
+<br/>
+
+<h3 id="几个Dockerfile"><a href="#几个Dockerfile" class="headerlink" title="几个Dockerfile"></a>几个Dockerfile</h3><p>mysql client</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> alpine:latest</span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> <span class="built_in">echo</span> https://mirrors.aliyun.com/alpine/latest-stable/main/ &gt; /etc/apk/repositories</span></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> apk add --no-cache mysql-client</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>jdk 17(这里如果使用alpine的话，有报错，因此采用ubuntu镜像):</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> ubuntu:<span class="number">20.04</span></span><br><span class="line"><span class="keyword">ADD</span><span class="bash"> jdk-17_linux-x64_bin.tar.gz /root</span></span><br><span class="line"><span class="keyword">ENV</span> JAVA_HOME /root/jdk-<span class="number">17</span>/</span><br><span class="line"><span class="keyword">ENV</span> PATH $PATH:$JAVA_HOME/bin</span><br><span class="line"><span class="keyword">ENTRYPOINT</span><span class="bash"> [<span class="string">&quot;java&quot;</span>, <span class="string">&quot;-version&quot;</span>]</span></span><br></pre></td></tr></table></figure>
+
+<p>go:</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> golang:<span class="number">1.17</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">WORKDIR</span><span class="bash"> /go/src/app</span></span><br><span class="line"><span class="keyword">COPY</span><span class="bash"> . .</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> go get -d -v ./...</span></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> go install -v ./...</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">CMD</span><span class="bash"> [<span class="string">&quot;app&quot;</span>]</span></span><br></pre></td></tr></table></figure>
+
+
+<p>Yearning: </p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> alpine:<span class="number">3.12</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">LABEL</span><span class="bash"> maintainer=<span class="string">&quot;HenryYee-2020/11/16&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">EXPOSE</span> <span class="number">8000</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">COPY</span><span class="bash"> Yearning  /opt/Yearning</span></span><br><span class="line"><span class="keyword">COPY</span><span class="bash"> conf.toml /opt/conf.toml</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> <span class="built_in">echo</span> <span class="string">&quot;http://mirrors.ustc.edu.cn/alpine/v3.12/main/&quot;</span> &gt; /etc/apk/repositories &amp;&amp; \</span></span><br><span class="line"><span class="bash">      apk add --no-cache tzdata libc6-compat &amp;&amp; \</span></span><br><span class="line"><span class="bash">      ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime &amp;&amp; \</span></span><br><span class="line"><span class="bash">      <span class="built_in">echo</span> <span class="string">&quot;Asia/Shanghai&quot;</span> &gt;&gt; /etc/timezone &amp;&amp; \</span></span><br><span class="line"><span class="bash">      <span class="built_in">echo</span> <span class="string">&#x27;hosts: files mdns4_minimal [NOTFOUND=return] dns mdns4&#x27;</span> &gt;&gt; /etc/nsswitch.conf</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">WORKDIR</span><span class="bash"> /opt</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">CMD</span><span class="bash"> /opt/Yearning install &amp;&amp; /opt/Yearning run</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</div></div><div class="post-main post-comment"></div></article><link rel="stylesheet" type="text/css" href="/css/font.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.css"><script src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script><script src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js"></script><script>$(document).ready(function() {
+  $(".fancybox").fancybox();
+});
+</script></body></html>
