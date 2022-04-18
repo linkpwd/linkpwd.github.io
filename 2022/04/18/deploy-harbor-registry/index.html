@@ -1,0 +1,36 @@
+<!DOCTYPE html><html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="虽然云环境开箱即用越来越便捷，但是某些情况下，还是需要自己安装部署一些基础的服务，如为了降低费用，如不希望将服务部署在云上面，如自己学习测试使用等等。今天的场景就是内网测试环境的镜像打包，提交到外网有点儿费流量，开发测试环境均在内网，就无必要将镜像提交到外网了。"><link rel="stylesheet" type="text/css" href="/css/normalize.css"><link rel="stylesheet" type="text/css" href="/css/highlight.css"><link rel="stylesheet" type="text/css" href="/css/noise.css"><title>部署镜像仓库harbor | linkpwd|</title><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><meta name="generator" content="Hexo 5.4.0"></head><body><article class="wrapper"><div class="post-main"><div class="nav"><nav class="container"><a class="sidebar-nav-item active" href="/">主页</a><a class="sidebar-nav-item" href="/archives">归档</a></nav><div class="container post-meta"><div class="post-time">2022-04-18</div></div></div><div class="container post-header"><h1>部署镜像仓库harbor</h1></div><div class="container post-toc"><details class="toc"><summary class="toc-accordion">目录</summary><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E7%9A%84%E6%80%9D%E8%80%83"><span class="toc-number">1.</span> <span class="toc-text">环境的思考</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85harbar"><span class="toc-number">2.</span> <span class="toc-text">安装harbar</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E5%AE%98%E7%BD%91%E3%80%81%E4%B8%8B%E8%BD%BD"><span class="toc-number">2.1.</span> <span class="toc-text">1. 官网、下载</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2"><span class="toc-number">2.2.</span> <span class="toc-text">2. 安装部署</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E4%BF%AE%E6%94%B9docker%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8F%98%E9%87%8F"><span class="toc-number">2.3.</span> <span class="toc-text">3. 修改docker的启动变量</span></a></li></ol></li></ol></details></div><div class="container post-content"><p>虽然云环境开箱即用越来越便捷，但是某些情况下，还是需要自己安装部署一些基础的服务，如为了降低费用，如不希望将服务部署在云上面，如自己学习测试使用等等。今天的场景就是内网测试环境的镜像打包，提交到外网有点儿费流量，开发测试环境均在内网，就无必要将镜像提交到外网了。</p>
+<h3 id="环境的思考"><a href="#环境的思考" class="headerlink" title="环境的思考"></a>环境的思考</h3><ul>
+<li>测试开发环境与生产环境一定是严格隔离的，包括网络、各中件间、服务等</li>
+<li>测试开发环境理应与生产环境的各种显示信息包保持致，包括域名、部署方式(如docker、虚拟机、k8s混用）等等</li>
+<li>测试开发环境可交由开发、测试进行维护管理，有问题可找运维处理</li>
+</ul>
+<h3 id="安装harbar"><a href="#安装harbar" class="headerlink" title="安装harbar"></a>安装harbar</h3><p>记录下harbor安装过程，docker环境部署</p>
+<h4 id="1-官网、下载"><a href="#1-官网、下载" class="headerlink" title="1. 官网、下载"></a>1. 官网、下载</h4><pre><code>cncf官网上看,harbor是已毕业的项目
+https://goharbor.io/
+https://www.cncf.io/projects/
+https://github.com/goharbor/harbor/releases
+</code></pre>
+<h4 id="2-安装部署"><a href="#2-安装部署" class="headerlink" title="2. 安装部署"></a>2. 安装部署</h4><pre><code>a. 安装docker-compose
+b. 使用相应的脚本进行安装
+</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># cp harbor.yml.tmpl harbor.yml  修改配置文件</span></span><br><span class="line"><span class="comment">#./install</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="3-修改docker的启动变量"><a href="#3-修改docker的启动变量" class="headerlink" title="3. 修改docker的启动变量"></a>3. 修改docker的启动变量</h4><pre><code>a.查看docker
+</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment"># systemctl status docker</span></span><br><span class="line">● docker.service - Docker Application Container Engine</span><br><span class="line">   Loaded: loaded (/usr/lib/systemd/system/docker.service; enabled; vendor preset: disabled)</span><br><span class="line">   Active: active (running) since Mon 2022-04-18 11:44:17 CST; 14min ago</span><br><span class="line">     Docs: https://docs.docker.com</span><br><span class="line"> Main PID: 15244 (dockerd)</span><br><span class="line">    Tasks: 88</span><br><span class="line">   Memory: 216.1M</span><br><span class="line">   CGroup: /system.slice/docker.service</span><br></pre></td></tr></table></figure>
+
+<pre><code>b. 修改/usr/lib/systemd/system/docker.service ,加入–insecure-registry 并重启 (有证书走https协议应该不用)
+
+ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock --insecure-registry=172.18.200.75
+
+c. 重启及登录 
+ systemctl daemon-reload
+ systemctl restart docker
+ docker login 172.18.200.75
+
+d. 走正常的CI/CD流程
+</code></pre>
+</div></div><div class="post-main post-comment"></div></article><link rel="stylesheet" type="text/css" href="/css/font.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.css"><script src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script><script src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js"></script><script>$(document).ready(function() {
+  $(".fancybox").fancybox();
+});
+</script></body></html>
